@@ -26,6 +26,11 @@ a{
     max-width: 1100px;
     margin: 0 auto;
 }
+.containerP0 {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+}
 body{
     margin: auto;
     padding: 0;
@@ -38,5 +43,47 @@ body{
 $mainColor : #28477d;
 
 @mixin btn {
+    overflow: hidden;
+    background: #28477D;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: capitalize;
+    padding: 14px 31px;
+    padding-bottom: 12px;
+    display: inline-block;
+    border-radius: 0px 25px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    border: none;
+    &:hover {
+        color: #fff;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, #87c150, #83c058, #7fbf60, #7cbd67, #79bc6e, #72bb77, #6dba7f, #69b987, #62b892, #5eb69c, #5db4a5, #61b2ab);
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: .5s all;
+            border-radius: 0px;
+            animation-name: btn;
+            animation-duration: .5s;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
 
+        }
+    }
+    @keyframes btn {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 100%;
+        }
+    }
 }
