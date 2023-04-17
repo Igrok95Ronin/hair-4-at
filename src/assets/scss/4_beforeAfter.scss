@@ -1,0 +1,19 @@
+.beforeAfter {
+    padding: 30px 0;
+}
+.beforeAfter__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+}
+.beforeAfter__left,
+.beforeAfter__right {
+    max-width: 100%;
+    max-height: 100%;
+}
+.beforeAfter__img {
+    width: 100%;
+    height: 100%;
+}
