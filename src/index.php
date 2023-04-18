@@ -1,11 +1,11 @@
 <?php
-$site_data      = json_decode(file_get_contents('http://templates.jquery.link/api/' . $_SERVER['HTTP_HOST']), true);
+$site_data      = json_decode(file_get_contents('http://local.jquery.link/api/' . $_SERVER['HTTP_HOST']), true);
 
 $phone_name     = $site_data['phone_name'];
 $phone_href     = $site_data['phone_href'];
 
-$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Entrumpelung'));
-$city           = str_replace('+', ' ', trim($_GET['n'] ?? 'in der nahe'));
+$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Haartransplantation'));
+$city           = str_replace('+', ' ', trim($_GET['n'] ?? ''));
 
 $title = $text . ' ' . $city;
 ?>
@@ -33,7 +33,7 @@ $title = $text . ' ' . $city;
             <div class="row">
                 <div class="col-12 container">
                     <div class="header__box">
-                        <h1 class="header__title">Haartransplantation</h1>
+                        <h1 class="header__title"><?= $title ?></h1>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@ $title = $text . ' ' . $city;
                                 <div class="mainFon__btnW">
                                     <a class="mainFon__btnMessage" href="#anchor" >Jetzt Preis anfragen
                                     </a>
-                                    <a class="mainFon__btn" href="#" ><span>111222333</span></a>
+                                    <a class="mainFon__btn" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
                                 </div>
                             </div>
                             <div class="mainFon__right">
@@ -126,7 +126,7 @@ $title = $text . ' ' . $city;
                             </div>
                             <p class="mainFonMobile__txt">Mit mehr als 10 Jahren Erfahrung bietet das Haar Experte Team in Istanbul die besten Lösungen für <b>Haartransplantationen</b>. Das Expertenteam legt großen Wert auf fortschrittliche Technologie, Qualität und zuverlässige Gesundheitsversorgung bei allen Behandlungen, einschließlich Bart- und Augenbrauentransplantationen.</p>
                             <div class="mainFonMobile__btnTW">
-                                <a class="mainFonMobile__btnT" href="#" ><span>111222333</span></a>
+                                <a class="mainFonMobile__btnT" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
                             </div>
                             <div class="commit__left">
                                 <div class="commit__message">
@@ -253,7 +253,7 @@ $title = $text . ' ' . $city;
                             </div>
                             <div class="safeConduct__right">
                                 <p class="safeConduct__txt">Die Haar Expert Klinik ist mit modernster Ausrüstung und Werkzeugen ausgestattet, um die bestmögliche Haartransplantationserfahrung für ihre Patienten zu gewährleisten. Das Team von Spezialisten nutzt fortschrittliche Technologien und Werkzeuge, um die Transplantationen effektiv und sicher durchzuführen.</p>
-                                <a class="safeConduct__btn" href="#" ><span>111222333</span></a>
+                                <a class="safeConduct__btn" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
                             </div>
                         </div>
                     </div>
@@ -305,9 +305,7 @@ $title = $text . ' ' . $city;
         </section>
         <section class='btnFixed'>
             <div class='btnFixed__box'>
-                <a href="#" class="btnFixed__T">
-                   <!-- <img class="btnFixed__imgT" src="assets/icons/telephone-fill.svg" alt="" > -->
-                </a>
+                <a href="<?= $phone_href ?>" class="btnFixed__T"></a>
                 <a href="https://api.whatsapp.com/send?phone=436604275976" class="btnFixed__M">
                    <img class="btnFixed__imgM" src="assets/icons/WhatsApp.svg" alt="" >
                 </a>
