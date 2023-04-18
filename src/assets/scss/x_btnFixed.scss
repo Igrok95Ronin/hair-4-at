@@ -1,16 +1,51 @@
 .btnFixed {
-    display: none;
     position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 0 1px;
-    margin-bottom: 10px;
+    bottom: 20px;
+    right: 10px;
+    z-index: 999;
 }
 .btnFixed__box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
-.btnFixed__btn {
-    @include btn;
-    width: 100%;
-    text-align: center;
-    padding: 16px 15px;
+.btnFixed__T {
+    background-color: $mainColor;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: .3s;
+    position: relative;
+    &:hover {
+        border: 1px solid $mainColor;
+        background-color: transparent;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url(../icons/telephone.svg);
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url(../icons/telephone-fill.svg);
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+.btnFixed__imgT {
+}
+.btnFixed__M {
+}
+.btnFixed__imgM {
 }
