@@ -1,0 +1,36 @@
+.dhiTechnique {
+    padding: 30px 0;
+}
+.dhiTechnique__box {
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.dhiTechnique__left {
+
+}
+.dhiTechnique__top {
+    background-color: $mainColor;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+.dhiTechnique__bottom {
+    background-color: #f9f9f9;
+    padding:  20px;
+    border-radius: 0 0 5px 5px;
+}
+.dhiTechnique__ul {
+    font-size: 18px;
+    line-height: 28px;
+    li{
+        margin-bottom: 10px;
+    }
+}
+.dhiTechnique__right {
+}
