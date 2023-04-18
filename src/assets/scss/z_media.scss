@@ -1,0 +1,55 @@
+@media(max-width: 900px) {
+    .mainFon__btnMessage {
+        padding: 14px 20px;
+    }
+    .hairTransplantation__box,
+    .dhiTechnique__box {
+        grid-template-columns: 1fr;
+    }
+    .requestQuote__box {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .safeConduct__box{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+@media(max-width: 767px) {
+    .mainFon,
+    .commit{
+        display: none;
+    }
+    .mainFonMobile {
+        display: block;
+    }
+    .beforeAfter__box {
+        grid-template-columns: 1fr;
+    }
+    .forms__box {
+        padding: 100px 10px;
+    }
+    .forms__title {
+        text-align: center;
+    }
+}
+@media(max-width: 425px) {
+    .hairTransplantation__box,
+    .beforeAfter__box,
+    .commit__message,
+    .mainFonMobile__txt,
+    .dhiTechnique__box,
+    .requestQuote__box,
+    .safeConduct__box{
+        padding: 20px 10px;
+    }
+    .commit__message {
+        flex-direction: column;
+        align-items: center;
+    }
+    .commit__message__name,
+    .commit__message__stars {
+        text-align: center;
+    }
+}

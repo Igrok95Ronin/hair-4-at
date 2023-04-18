@@ -37,7 +37,7 @@
 .commit__message__right {
 }
 .commit__message__name {
-    font-size: 32px;
+    font-size: clamp(30px,4vw,32px);
     color: $mainColor;
 }
 .commit__message__stars {

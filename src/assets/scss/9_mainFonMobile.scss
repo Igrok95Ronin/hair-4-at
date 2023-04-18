@@ -1,0 +1,98 @@
+.mainFonMobile {
+    display: none;
+}
+.mainFonMobile__box {
+}
+.mainFonMobile__imgW,
+.mainFonMobile__img2W {
+    max-width: 100%;
+    max-height: 100%;
+}
+.mainFonMobile__img,
+.mainFonMobile__img2 {
+    width: 100%;
+    height: 100%;
+}
+.mainFonMobile__ul{
+    margin-top: 32px;
+    line-height: 35px;
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 50px;
+    li{
+        position: relative;
+        margin-bottom: 16px;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url(../img/1.png);
+            background-size: cover;
+            width: 37px;
+            height: 36px;
+            left: -45px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    li:nth-child(2){
+        &::before{
+            background-image: url(../img/2.png);
+        }
+    }
+    li:nth-child(3){
+        &::before{
+            background-image: url(../img/3.png);
+        }
+    }
+    li:nth-child(4){
+        &::before{
+            background-image: url(../img/4.png);
+        }
+    }
+}
+.mainFonMobile__btnMW,
+.mainFonMobile__btnTW {
+    padding: 0 12px;
+    margin-bottom: 16px;
+}
+.mainFonMobile__btnM,
+.mainFonMobile__btnT {
+    @include btn;
+    width: 100%;
+    text-align: center;
+}
+.mainFonMobile__name {
+    text-align: center;
+    background-color: $mainColor;
+    color: #fff;
+    padding: 14px 31px;
+    margin-bottom: 16px;
+}
+.mainFonMobile__txt {
+    padding: 0 12px;
+    color: #777;
+    line-height: 25px;
+    margin-bottom: 16px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+}
+.mainFonMobile__btnTW {
+}
+.mainFonMobile__btnT {
+    @include btn;
+    padding-left: 40px;
+    span{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url(../icons/telephone-fill.svg);
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%);
+        }
+    }
+}
