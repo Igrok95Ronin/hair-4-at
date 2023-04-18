@@ -1,0 +1,46 @@
+.safeConduct {
+    padding: 30px 0;
+}
+.safeConduct__box {
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    background-color: #fff;
+}
+.safeConduct__left {
+    max-width: 100%;
+    max-height: 100%;
+}
+.safeConduct__img {
+    width: 100%;
+    height: 100%;
+}
+.safeConduct__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.safeConduct__txt {
+    font-size: 18px;
+    line-height: 28px;
+}
+.safeConduct__btn {
+    @include btn;
+    padding-left: 40px;
+    span{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url(../icons/telephone-fill.svg);
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%);
+        }
+    }
+}
